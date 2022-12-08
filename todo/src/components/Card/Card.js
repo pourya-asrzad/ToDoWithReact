@@ -1,11 +1,14 @@
 import React from "react";
 
-const Card = ({ id, title, date, description, onDeleteItem }) => {
+const Card = ({ id, title, date, description, onDeleteItem, ongetdata }) => {
   function deleteItemHandler(e) {
     fetch(`http://localhost:3000/toDoItems/${e.target.id}`, {
       method: "DELETE",
     });
     onDeleteItem(e.target.id);
+  }
+  function editItemHandler(e) {
+    ongetdata(e.target.id);
   }
   return (
     <div className="card">
@@ -13,7 +16,9 @@ const Card = ({ id, title, date, description, onDeleteItem }) => {
       <h4>{date}</h4>
       <p className="description">{description}</p>
       <div className="button-container-card">
-        <button id={id}>Edit item</button>
+        <button onClick={editItemHandler} id={id}>
+          Edit item
+        </button>
         <button onClick={deleteItemHandler} id={id}>
           Delete
         </button>

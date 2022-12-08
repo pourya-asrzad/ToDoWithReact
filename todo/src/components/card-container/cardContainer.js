@@ -1,12 +1,13 @@
 import React from "react";
 import Card from "../Card/Card";
 
-const CardContainer = ({ data, onDeleteItem }) => {
+const CardContainer = ({ data, onDeleteItem, ongetdata }) => {
   return (
     <div className="card-container">
       {data.map((element) => {
         return (
           <Card
+            ongetdata={ongetdata}
             onDeleteItem={onDeleteItem}
             key={element.id}
             id={element.id}
