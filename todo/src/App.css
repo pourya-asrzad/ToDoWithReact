@@ -1,7 +1,18 @@
-.App {
-  text-align: center;
+.app {
+  display: flex;
+  justify-content: space-around;
 }
-
+body{
+background-color: rgba(204, 204, 204, 0.657);
+}
+.card{
+  width: 17rem;
+  background-color: aliceblue;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid blue;
+  position: relative;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +46,40 @@
   to {
     transform: rotate(360deg);
   }
+}
+.card-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+input{
+  width: 15rem;
+  height: 1.75rem;
+border: none;
+margin-bottom: 10px;
+border-radius: 5px;
+}
+textarea{
+  border: none;
+  width: 15rem;
+  height: 5rem;
+  border-radius: 12px;
+}
+button{
+  padding: 9px 15px ; 
+  margin: 10px;
+  background-color: #61dafb;
+  border: 0;
+     font-weight: bold;
+     border-radius: 8px;
+}
+button:hover{
+  background-color: #2dbfe7;
+}
+.button-container-card{
+  position: absolute;
+  bottom: 10px;
+}
+.description{
+  margin-bottom: 50px;
 }
